@@ -1,0 +1,36 @@
+.gallery{
+	width: 95%;
+	border: 2px solid white;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr; 
+	grid-column-gap: 4px;
+	position: relative;
+}
+
+.gallery img{
+	width: 100%;
+}
+
+/* Make it draggable */
+.item {
+	border: 2px solid white;
+	display: block;
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	margin: 1px;
+	z-index: 1;
+	background: #000;
+	color: #fff;
+  }
+  .item.muuri-item-dragging {
+	z-index: 3;
+  }
+  .item.muuri-item-releasing {
+	z-index: 2;
+  }
+  .item.muuri-item-hidden {
+	z-index: 0;
+  }
